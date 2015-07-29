@@ -51,12 +51,12 @@ angular.module('starter', ['ionic', 'starter.controllers'])
                 }
             }
         })
-        .state('app.doughnut', {
-            url: '/doughnut',
+        .state('app.pie', {
+            url: '/pie',
             views: {
                 'menuContent': {
-                    templateUrl: 'templates/doughnut.html',
-                    controller: 'DoughnutCtrl'
+                    templateUrl: 'templates/pie.html',
+                    controller: 'PieCtrl'
                 }
             }
         });

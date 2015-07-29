@@ -65,26 +65,28 @@ angular.module('starter.controllers', ["chart.js"])
 
 .controller("LineCtrl", function($scope) {
 
-        $scope.labels = ["January", "February", "March", "April", "May", "June", "July"];
-        $scope.series = ['Series A', 'Series B'];
+        $scope.labels = ["1月", "2月", "3月", "4月", "5月", "6月", "7月","8月","9月","10月","11月","12月"];
+        $scope.series = ['2014年', '2013年'];
         $scope.data = [
-            [65, 59, 80, 81, 56, 55, 40],
-            [28, 48, 40, 19, 86, 27, 90]
+            [46000,32000,42800,50000,57000,51200,48000,29000,61000,49000,30000,54500],
+            [43000,30000,40000,49000,55000,48700,45000,31000,54000,47000,29000,51400]
         ];
         $scope.onClick = function(points, evt) {
             console.log(points, evt);
         };
     })
     .controller("BarCtrl", function($scope) {
-        $scope.labels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
-        $scope.series = ['Series A', 'Series B'];
+        $scope.labels = ['2008', '2009', '2010', '2011', '2012','2013', '2014'];
+        $scope.series = ['财政总收入', '公共预算收入'];
 
         $scope.data = [
-            [65, 59, 80, 81, 56, 55, 40],
-            [28, 48, 40, 19, 86, 27, 90]
+            [200000,220000, 250000,265000, 280000,300000,330000],
+            [110000, 120000, 145000, 155000, 160000, 187000, 210000]
         ];
     })
-    .controller("DoughnutCtrl", function($scope) {
-        $scope.labels = ["Download Sales", "In-Store Sales", "Mail-Order Sales"];
-        $scope.data = [300, 500, 100];
+    .controller("PieCtrl", function($scope) {
+        $scope.labels = ["增值税","营改增","消费税","企业所得税","其他"];
+        $scope.data = [150000, 145000, 138000,128000,139800];
+        $scope.labels2 = ["东城区","西城区","开发区","宝塔区","青山乡","其他"];
+        $scope.data2 = [110000, 80000, 70000,90000,40000,28000];
     });
