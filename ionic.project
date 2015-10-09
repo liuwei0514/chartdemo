@@ -1,4 +1,12 @@
 {
-  "name": "chartdemo",
-  "app_id": ""
+  "name": "掌上决策",
+  "app_id": "",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
 }

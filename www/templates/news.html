@@ -1,0 +1,9 @@
+<ion-view view-title="工作动态">
+    <ion-content>
+        <div class="list">
+            <a ng-repeat="newsItem in news" href="#/app/newsitem/{{newsItem._id}}" class="item">
+                {{newsItem.title}}
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

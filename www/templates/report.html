@@ -1,0 +1,27 @@
+<ion-view view-title="数据上报">
+    <ion-content class="app-report">
+        <!-- list-inset -->
+        <div class="list padding">
+            <div class="item item-input item-stacked-label">
+                <span class="input-label">具体位置</span>
+                <textarea ng-model="address" style="width:70%" placeholder="定位中"></textarea>
+                <button class="button btn-location" ng-click="changeLocation();"><i class="ion-location"></i>更改位置</button>
+            </div>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">标题</span>
+                <input type="text" placeholder="标题">
+            </label>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">事件描述</span>
+                <textarea placeholder="事件描述"></textarea>
+            </label>
+            <div class="item item-input item-stacked-label">
+                <span class="input-label">附件列表</span>
+                <input type="hidden" placeholder="">
+                <img src="" id="myImage" alt="">
+                <button class="button btn-attach" ng-click="attachImg()"><i class="ion-camera"></i>拍照上传</button>
+            </div>
+            <a class="button button-block" ng-href="#app/index">提交</a>
+        </div>
+    </ion-content>
+</ion-view>

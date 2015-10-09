@@ -10,7 +10,7 @@ document.addEventListener("deviceready", function(){
 }, false);
 
 
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('starter', ['ionic', 'starter.controllers','ngCordova'])
 
 .run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
@@ -31,11 +31,71 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
 
-        .state('app', {
+    .state('app', {
         url: '/app',
         abstract: true,
         templateUrl: 'templates/menu.html',
         controller: 'AppCtrl'
+    })
+
+    .state('app.index', {
+        url: '/index',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/index.html',
+                controller: 'IndexCtrl'
+            }
+        }
+    })
+
+    .state('app.report', {
+        url: '/report',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/report.html',
+                controller: 'ReportCtrl'
+            }
+        }
+    })
+
+    .state('app.news', {
+        url: '/news',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/news.html',
+                controller: 'NewsCtrl'
+            }
+        }
+    })
+    .state('app.newsitem', {
+        url: '/newsitem/:id',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/newsitem.html',
+                controller: 'NewsitemCtrl'
+            }
+        }
+    })
+
+
+    .state('app.jixiao', {
+        url: '/jixiao',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/jixiao.html',
+                controller: 'JixiaoCtrl'
+            }
+        }
+    })
+
+    .state('app.map', {
+        url: '/map',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/map.html',
+                controller: 'MapCtrl'
+            }
+        }
     })
 
     .state('app.line', {
@@ -67,5 +127,5 @@ angular.module('starter', ['ionic', 'starter.controllers'])
             }
         });
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/app/line');
+    $urlRouterProvider.otherwise('/app/index');
 });

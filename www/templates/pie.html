@@ -1,9 +1,18 @@
-<ion-view view-title="饼形图">
+<ion-view view-title="税收分析">
     <ion-content>
-    <h2>税收收入饼图</h2>
-        <canvas id="pie" class="chart chart-pie" data="data" labels="labels" legend="true">></canvas>
-    
-    <h2>区域税收收入饼图</h2>
-        <canvas id="pie2" class="chart chart-pie" data="data2" labels="labels2" legend="true">></canvas>
+        <ion-slide-box style="height:100%">
+            <ion-slide>
+                <div class="box blue">
+                    <h2>税收收入饼图</h2>
+                    <canvas id="pie" class="chart chart-pie" data="data" labels="labels" legend="true">></canvas>
+                </div>
+            </ion-slide>
+            <ion-slide>
+                <div class="box yellow">
+                    <h2>区域税收收入饼图</h2>
+                    <canvas id="pie2" class="chart chart-pie" data="data2" labels="labels2" legend="true">></canvas>
+                </div>
+            </ion-slide>
+        </ion-slide-box>
     </ion-content>
 </ion-view>

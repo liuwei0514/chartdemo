@@ -15,9 +15,122 @@ $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
 
+$light: #fff !default;
+$stable: #27ae60 !default;
+$positive: #387ef5 !default;
+$calm: #11c1f3 !default;
+$balanced: #33cd5f !default;
+$energized: #ffc900 !default;
+$assertive: #ef473a !default;
+$royal: #886aea !default;
+$dark: #444 !default;
+$button-stable-bg: $stable !default;
+$button-stable-text: #fff !default;
+$button-stable-border: #27ae60 !default;
+$button-stable-active-bg: #27ae60 !default;
+$button-stable-active-border: #27ae60 !default;
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
-
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
+body {
+    background-color: #f7f7f7;
+}
 
+.app-index {
+    background-image: url("../img/index-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    .logo {
+        width: 100%;
+        margin-top: 3em;
+    }
+    .row {
+        .button {
+            margin-top: 1em;
+            box-shadow: 1px 1px 1px #333;
+            border-radius: 6px;
+            width: 100%;
+            padding: 10px;
+            i {
+                clear: both;
+                width: 100%;
+                display: block;
+                font-size: 50px;
+            }
+            line-height:1em;
+            font-size:14px;
+        }
+    }
+}
+
+.app-report {
+    .list {
+        .item {
+            border-left: 0;
+            border-right: 0;
+            min-height: 88px;
+        }
+    }
+    .input-label {
+        color: $stable;
+        font-weight: bold;
+    }
+    .btn-location,
+    .btn-attach {
+        padding: 10px;
+        border-radius: 6px;
+        i {
+            clear: both;
+            width: 100%;
+            display: block;
+            font-size: 40px;
+            color: $stable;
+        }
+        font-size:14px;
+        line-height:1em;
+        background-color: #FFF;
+        color:#000;
+        float: right;
+        position: absolute;
+        bottom:2px;
+        right:0;
+        height:76px;
+        border-color: #27ae60;
+        border-width: 1px;
+        border-style: solid;
+    }
+}
+
+#loginForm {
+    
+}
+
+.app-changelocation{
+    .btn-submit{
+        position: absolute;
+        bottom:0;
+        width:80%;
+        left:10%;
+    }
+}
+
+#mapContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.htmlContent{
+    line-height: 1.5em;
+    text-indent: 2em;
+}
+
+.chart-container{
+    width:90%;
+    margin-left: 5%;
+}
